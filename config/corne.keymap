@@ -135,7 +135,7 @@
 &kp TAB    &kp N1  &kp N2  &kp N3            &kp N4          &kp N5    &none     &kp HOME  &kp UP    &kp PAGE_UP    &kp N0   &kp BSPC
 &none      &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none     &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT      &kp END  &trans
 &kp LSHFT  &trans  &trans  &trans            &trans          &trans    &trans    &kp END   &kp DOWN  &kp PAGE_DOWN  &trans   &trans
-                           &kp LGUI          &trans          &trans    &trans    &trans    &to 0
+                           &trans            &trans          &trans    &trans    &trans    &to 0
             >;
         };
 
@@ -169,15 +169,6 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans          &trans  &to 0   &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };

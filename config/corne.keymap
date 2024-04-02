@@ -144,81 +144,7 @@
 
     #define THUMB_KEYS   36 37 38   39 40 41
 
-    //
-    // Home row mods with per-finger configuration settings
-    //
-    #ifndef PINKY_HOLDING_TYPE
-    #define PINKY_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
-    #ifndef PINKY_HOLDING_TIME
-    #define PINKY_HOLDING_TIME HOMEY_HOLDING_TIME
-    #endif
-    #ifndef PINKY_STREAK_DECAY
-    #define PINKY_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
-    #ifndef PINKY_REPEAT_DECAY
-    #define PINKY_REPEAT_DECAY HOMEY_REPEAT_DECAY
-    #endif
-    #ifndef RING1_HOLDING_TYPE
-    #define RING1_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
-    #ifndef RING1_HOLDING_TIME
-    #define RING1_HOLDING_TIME HOMEY_HOLDING_TIME
-    #endif
-    #ifndef RING1_STREAK_DECAY
-    #define RING1_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
-    #ifndef RING1_REPEAT_DECAY
-    #define RING1_REPEAT_DECAY HOMEY_REPEAT_DECAY
-    #endif
-    #ifndef RING2_HOLDING_TYPE
-    #define RING2_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
-    #ifndef RING2_HOLDING_TIME
-    #define RING2_HOLDING_TIME HOMEY_HOLDING_TIME
-    #endif
-    #ifndef RING2_STREAK_DECAY
-    #define RING2_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
-    #ifndef RING2_REPEAT_DECAY
-    #define RING2_REPEAT_DECAY HOMEY_REPEAT_DECAY
-    #endif
-    #ifndef MIDDY_HOLDING_TYPE
-    #define MIDDY_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
-    #ifndef MIDDY_HOLDING_TIME
-    #define MIDDY_HOLDING_TIME HOMEY_HOLDING_TIME
-    #endif
-    #ifndef MIDDY_STREAK_DECAY
-    #define MIDDY_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
-    #ifndef MIDDY_REPEAT_DECAY
-    #define MIDDY_REPEAT_DECAY HOMEY_REPEAT_DECAY
-    #endif
-    #ifndef INDEX_HOLDING_TYPE
-    #define INDEX_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
-    #ifndef INDEX_HOLDING_TIME
-    #define INDEX_HOLDING_TIME HOMEY_HOLDING_TIME
-    #endif
-    #ifndef INDEX_STREAK_DECAY
-    #define INDEX_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
-    #ifndef INDEX_REPEAT_DECAY
-    #define INDEX_REPEAT_DECAY HOMEY_REPEAT_DECAY
-    #endif
-    #ifndef LEFT_PINKY_HOLDING_TYPE
-    #define LEFT_PINKY_HOLDING_TYPE PINKY_HOLDING_TYPE
-    #endif
-    #ifndef LEFT_PINKY_HOLDING_TIME
-    #define LEFT_PINKY_HOLDING_TIME PINKY_HOLDING_TIME
-    #endif
-    #ifndef LEFT_PINKY_STREAK_DECAY
-    #define LEFT_PINKY_STREAK_DECAY PINKY_STREAK_DECAY
-    #endif
-    #ifndef LEFT_PINKY_REPEAT_DECAY
-    #define LEFT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
-    #endif
+    
 
     left_pinky: homey_left_pinky {
         compatible = "zmk,behavior-hold-tap";
@@ -232,22 +158,7 @@
         bindings = <&kp>, <&kp>;
     };
 
-    // RIGHT PINKY
-    #ifndef RIGHT_PINKY_HOLDING_TYPE
-    #define RIGHT_PINKY_HOLDING_TYPE PINKY_HOLDING_TYPE
-    #endif
     
-    #ifndef RIGHT_PINKY_HOLDING_TIME
-    #define RIGHT_PINKY_HOLDING_TIME PINKY_HOLDING_TIME
-    #endif
-    
-    #ifndef RIGHT_PINKY_STREAK_DECAY
-    #define RIGHT_PINKY_STREAK_DECAY PINKY_STREAK_DECAY
-    #endif
-
-    #ifndef RIGHT_PINKY_REPEAT_DECAY
-    #define RIGHT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
-    #endif
 
 
 
@@ -263,21 +174,7 @@
         bindings = <&kp>, <&kp>;
     };
 
-    #ifndef LEFT_RING1_HOLDING_TYPE
-    #define LEFT_RING1_HOLDING_TYPE RING1_HOLDING_TYPE
-    #endif
-    
-    #ifndef LEFT_RING1_HOLDING_TIME
-    #define LEFT_RING1_HOLDING_TIME RING1_HOLDING_TIME
-    #endif
-    
-    #ifndef LEFT_RING1_STREAK_DECAY
-    #define LEFT_RING1_STREAK_DECAY RING1_STREAK_DECAY
-    #endif
-    
-    #ifndef LEFT_RING1_REPEAT_DECAY
-    #define LEFT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
-    #endif
+   
 
 
 
@@ -294,22 +191,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        #ifndef RIGHT_RING1_HOLDING_TYPE
-    #define RIGHT_RING1_HOLDING_TYPE RING1_HOLDING_TYPE
-    #endif
-    #ifndef RIGHT_RING1_HOLDING_TIME
-    #define RIGHT_RING1_HOLDING_TIME RING1_HOLDING_TIME
-    #endif
-    #ifndef RIGHT_RING1_STREAK_DECAY
-    #define RIGHT_RING1_STREAK_DECAY RING1_STREAK_DECAY
-    #endif
-    #ifndef RIGHT_RING1_REPEAT_DECAY
-    #define RIGHT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
-    #endif
-
-
-
-
+     
 
         right_ring1: homey_right_ring1 {
             compatible = "zmk,behavior-hold-tap";
@@ -324,18 +206,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        #ifndef LEFT_RING2_HOLDING_TYPE
-    #define LEFT_RING2_HOLDING_TYPE RING2_HOLDING_TYPE
-    #endif
-    #ifndef LEFT_RING2_HOLDING_TIME
-    #define LEFT_RING2_HOLDING_TIME RING2_HOLDING_TIME
-    #endif
-    #ifndef LEFT_RING2_STREAK_DECAY
-    #define LEFT_RING2_STREAK_DECAY RING2_STREAK_DECAY
-    #endif
-    #ifndef LEFT_RING2_REPEAT_DECAY
-    #define LEFT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
-    #endif
+   
 
 
 
@@ -353,18 +224,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        #ifndef RIGHT_RING2_HOLDING_TYPE
-    #define RIGHT_RING2_HOLDING_TYPE RING2_HOLDING_TYPE
-    #endif
-    #ifndef RIGHT_RING2_HOLDING_TIME
-    #define RIGHT_RING2_HOLDING_TIME RING2_HOLDING_TIME
-    #endif
-    #ifndef RIGHT_RING2_STREAK_DECAY
-    #define RIGHT_RING2_STREAK_DECAY RING2_STREAK_DECAY
-    #endif
-    #ifndef RIGHT_RING2_REPEAT_DECAY
-    #define RIGHT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
-    #endif
+    
 
 
 
@@ -382,19 +242,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        #ifndef LEFT_MIDDY_HOLDING_TYPE
-    #define LEFT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
-    #endif
-    #ifndef LEFT_MIDDY_HOLDING_TIME
-    #define LEFT_MIDDY_HOLDING_TIME MIDDY_HOLDING_TIME
-    #endif
-    #ifndef LEFT_MIDDY_STREAK_DECAY
-    #define LEFT_MIDDY_STREAK_DECAY MIDDY_STREAK_DECAY
-    #endif
-    #ifndef LEFT_MIDDY_REPEAT_DECAY
-    #define LEFT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
-    #endif
-
+      
      
      
         left_middy: homey_left_middy {
@@ -411,18 +259,6 @@
         };
 
 
-    #ifndef RIGHT_MIDDY_HOLDING_TYPE
-    #define RIGHT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
-    #endif
-    #ifndef RIGHT_MIDDY_HOLDING_TIME
-    #define RIGHT_MIDDY_HOLDING_TIME MIDDY_HOLDING_TIME
-    #endif
-    #ifndef RIGHT_MIDDY_STREAK_DECAY
-    #define RIGHT_MIDDY_STREAK_DECAY MIDDY_STREAK_DECAY
-    #endif
-    #ifndef RIGHT_MIDDY_REPEAT_DECAY
-    #define RIGHT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
-    #endif
 
 
 
@@ -441,19 +277,7 @@
 
 
 
-    #ifndef LEFT_INDEX_HOLDING_TYPE
-    #define LEFT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
-    #endif
-    #ifndef LEFT_INDEX_HOLDING_TIME
-    #define LEFT_INDEX_HOLDING_TIME INDEX_HOLDING_TIME
-    #endif
-    #ifndef LEFT_INDEX_STREAK_DECAY
-    #define LEFT_INDEX_STREAK_DECAY INDEX_STREAK_DECAY
-    #endif
-    #ifndef LEFT_INDEX_REPEAT_DECAY
-    #define LEFT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
-    #endif
-
+    
 
 
         left_index: homey_left_index {
@@ -470,18 +294,6 @@
         };
 
 
-    #ifndef RIGHT_INDEX_HOLDING_TYPE
-    #define RIGHT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
-    #endif
-    #ifndef RIGHT_INDEX_HOLDING_TIME
-    #define RIGHT_INDEX_HOLDING_TIME INDEX_HOLDING_TIME
-    #endif
-    #ifndef RIGHT_INDEX_STREAK_DECAY
-    #define RIGHT_INDEX_STREAK_DECAY INDEX_STREAK_DECAY
-    #endif
-    #ifndef RIGHT_INDEX_REPEAT_DECAY
-    #define RIGHT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
-    #endif
 
 
 

@@ -242,34 +242,37 @@
     #ifndef RIGHT_PINKY_STREAK_DECAY
     #define RIGHT_PINKY_STREAK_DECAY PINKY_STREAK_DECAY
     #endif
+
     #ifndef RIGHT_PINKY_REPEAT_DECAY
     #define RIGHT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
     #endif
 
 
 
-        right_pinky: homey_right_pinky {
-            compatible = "zmk,behavior-hold-tap";
-            flavor =
-            RIGHT_PINKY_HOLDING_TYPE;
-            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
-            quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
-            require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
+    right_pinky: homey_right_pinky {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = RIGHT_PINKY_HOLDING_TYPE;
+        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
+        quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
+        require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
 
-        #ifndef LEFT_RING1_HOLDING_TYPE
+    #ifndef LEFT_RING1_HOLDING_TYPE
     #define LEFT_RING1_HOLDING_TYPE RING1_HOLDING_TYPE
     #endif
+    
     #ifndef LEFT_RING1_HOLDING_TIME
     #define LEFT_RING1_HOLDING_TIME RING1_HOLDING_TIME
     #endif
+    
     #ifndef LEFT_RING1_STREAK_DECAY
     #define LEFT_RING1_STREAK_DECAY RING1_STREAK_DECAY
     #endif
+    
     #ifndef LEFT_RING1_REPEAT_DECAY
     #define LEFT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
     #endif

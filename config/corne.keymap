@@ -244,9 +244,7 @@
     #endif
     #ifndef RIGHT_PINKY_REPEAT_DECAY
     #define RIGHT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
-    #
-
-        endif
+    #endif
 
         right_pinky: homey_right_pinky {
             compatible = "zmk,behavior-hold-tap";
@@ -272,9 +270,7 @@
     #endif
     #ifndef LEFT_RING1_REPEAT_DECAY
     #define LEFT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
-    #
-
-        endif
+    #endif
 
         left_ring1: homey_left_ring1 {
             compatible = "zmk,behavior-hold-tap";

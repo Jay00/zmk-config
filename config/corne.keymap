@@ -233,12 +233,15 @@
             bindings = <&kp>, <&kp>;
         };
 
-        #ifndef RIGHT_PINKY_HOLDING_TYPE
+    // RIGHT PINKY
+    #ifndef RIGHT_PINKY_HOLDING_TYPE
     #define RIGHT_PINKY_HOLDING_TYPE PINKY_HOLDING_TYPE
     #endif
+    
     #ifndef RIGHT_PINKY_HOLDING_TIME
     #define RIGHT_PINKY_HOLDING_TIME PINKY_HOLDING_TIME
     #endif
+    
     #ifndef RIGHT_PINKY_STREAK_DECAY
     #define RIGHT_PINKY_STREAK_DECAY PINKY_STREAK_DECAY
     #endif

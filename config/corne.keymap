@@ -244,9 +244,9 @@
     #endif
     #ifndef RIGHT_PINKY_REPEAT_DECAY
     #define RIGHT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
-    #
+    #endif
 
-        endif
+
 
         right_pinky: homey_right_pinky {
             compatible = "zmk,behavior-hold-tap";
@@ -272,9 +272,9 @@
     #endif
     #ifndef LEFT_RING1_REPEAT_DECAY
     #define LEFT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
-    #
+    #endif
 
-        endif
+
 
         left_ring1: homey_left_ring1 {
             compatible = "zmk,behavior-hold-tap";
@@ -300,9 +300,11 @@
     #endif
     #ifndef RIGHT_RING1_REPEAT_DECAY
     #define RIGHT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
-    #
+    #endif
 
-        endif
+
+
+
 
         right_ring1: homey_right_ring1 {
             compatible = "zmk,behavior-hold-tap";
@@ -328,9 +330,10 @@
     #endif
     #ifndef LEFT_RING2_REPEAT_DECAY
     #define LEFT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
-    #
+    #endif
 
-        endif
+
+
 
         left_ring2: homey_left_ring2 {
             compatible = "zmk,behavior-hold-tap";
@@ -356,9 +359,10 @@
     #endif
     #ifndef RIGHT_RING2_REPEAT_DECAY
     #define RIGHT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
-    #
+    #endif
 
-        endif
+
+
 
         right_ring2: homey_right_ring2 {
             compatible = "zmk,behavior-hold-tap";
@@ -384,10 +388,10 @@
     #endif
     #ifndef LEFT_MIDDY_REPEAT_DECAY
     #define LEFT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
-    #
+    #endif
 
-        endif
-
+     
+     
         left_middy: homey_left_middy {
             compatible = "zmk,behavior-hold-tap";
             flavor =
@@ -401,7 +405,8 @@
             bindings = <&kp>, <&kp>;
         };
 
-        #ifndef RIGHT_MIDDY_HOLDING_TYPE
+
+    #ifndef RIGHT_MIDDY_HOLDING_TYPE
     #define RIGHT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
     #endif
     #ifndef RIGHT_MIDDY_HOLDING_TIME
@@ -412,9 +417,9 @@
     #endif
     #ifndef RIGHT_MIDDY_REPEAT_DECAY
     #define RIGHT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
-    #
+    #endif
 
-        endif
+
 
         right_middy: homey_right_middy {
             compatible = "zmk,behavior-hold-tap";
@@ -429,7 +434,9 @@
             bindings = <&kp>, <&kp>;
         };
 
-        #ifndef LEFT_INDEX_HOLDING_TYPE
+
+
+    #ifndef LEFT_INDEX_HOLDING_TYPE
     #define LEFT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
     #endif
     #ifndef LEFT_INDEX_HOLDING_TIME
@@ -440,9 +447,9 @@
     #endif
     #ifndef LEFT_INDEX_REPEAT_DECAY
     #define LEFT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
-    #
+    #endif
 
-        endif
+
 
         left_index: homey_left_index {
             compatible = "zmk,behavior-hold-tap";
@@ -457,7 +464,8 @@
             bindings = <&kp>, <&kp>;
         };
 
-        #ifndef RIGHT_INDEX_HOLDING_TYPE
+
+    #ifndef RIGHT_INDEX_HOLDING_TYPE
     #define RIGHT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
     #endif
     #ifndef RIGHT_INDEX_HOLDING_TIME
@@ -468,9 +476,9 @@
     #endif
     #ifndef RIGHT_INDEX_REPEAT_DECAY
     #define RIGHT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
-    #
+    #endif
 
-        endif
+
 
         right_index: homey_right_index {
             compatible = "zmk,behavior-hold-tap";

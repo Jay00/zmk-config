@@ -581,6 +581,11 @@
             bindings = <&caps_word>;
             key-positions = <16 19>;
         };
+
+        equals {
+            bindings = <&kp KP_EQUAL>;
+            key-positions = <7 8>;
+        };
     };
 
     macros {
@@ -597,10 +602,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E         &kp R             &kp T        &kp Y      &kp U      &kp I         &kp O    &kp P     &kp BSPC
-&kp LCTRL       &kp A  &kp S  &kp D         &kp F             &kp G        &kp H      &kp J      &kp K         &kp L    &kp SEMI  &kp SQT
-&sk LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V             &kp B        &kp N      &kp M      &kp COMMA     &kp DOT  &kp FSLH  &sk RIGHT_SHIFT
-                              &kp LEFT_ALT  &kp LEFT_CONTROL  &kp SPACE    &kp SPACE  &kp ENTER  &kp LEFT_WIN
+&kp TAB         &kp Q  &kp W  &kp E         &kp R                     &kp T        &kp Y      &kp U                  &kp I         &kp O    &kp P     &kp BSPC
+&caps_word      &kp A  &kp S  &kp D         &left_index LEFT_SHIFT F  &kp G        &kp H      &right_index RSHIFT J  &kp K         &kp L    &kp SEMI  &kp SQT
+&sk LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V                     &kp B        &kp N      &kp M                  &kp COMMA     &kp DOT  &kp FSLH  &sk RIGHT_SHIFT
+                              &kp LEFT_ALT  &kp LEFT_CONTROL          &kp SPACE    &kp SPACE  &kp ENTER              &kp LEFT_WIN
             >;
         };
 
@@ -612,14 +617,14 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1  &kp N2  &kp N3            &kp N4          &kp N5    &none     &kp HOME  &kp UP    &kp PAGE_UP    &kp N0   &kp BSPC
+&kp TAB    &none   &none   &none             &none           &none     &none     &kp HOME  &kp UP    &kp PAGE_UP    &none    &kp BSPC
 &none      &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none     &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT      &kp END  &trans
 &kp LSHFT  &trans  &trans  &trans            &trans          &trans    &trans    &kp END   &kp DOWN  &kp PAGE_DOWN  &trans   &trans
                            &trans            &trans          &trans    &trans    &trans    &to 0
             >;
         };
 
-        raise_layer {
+        symbols {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -628,18 +633,18 @@
 
             bindings = <
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
+&none      &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
                              &kp LGUI  &trans    &trans       &to 0      &trans     &to 0
             >;
         };
 
-        layer_3 {
+        numpad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &trans
-                        &trans  &trans  &trans    &trans  &trans           &kp KP_NUMBER_0
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_N0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &trans
+                        &trans  &trans  &trans    &trans     &trans           &kp KP_NUMBER_0
             >;
         };
 

@@ -9,119 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    // NOTE: Use the `#define` settings below to customize this keymap!
-    // For example, here are the main optional features you can enable:
 
-    #define DIFFICULTY_LEVEL  0 // 0:custom, 1:easy -> 5:hard (see below)
-// TIP: Add more setting overrides here instead of editing them below.
-
-//////////////////////////////////////////////////////////////////////////////
-//
-// Advanced Home Row Mods (HRM) Example based on
-// Sunaku's Keymap v35 -- "Glorious Engrammer"
-// - https://github.com/sunaku/glove80-keymaps
-//
-//////////////////////////////////////////////////////////////////////////////
-
-//
-// DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
-// It's meant to help newcomers gradually work their way up to mastery.
-// You can disable this setting by omitting it or assigning a `0` zero.
-//
-// #define DIFFICULTY_LEVEL 0 // custom (see defaults below)
-// #define DIFFICULTY_LEVEL 1 // novice (500ms)
-// #define DIFFICULTY_LEVEL 2 // slower (400ms)
-// #define DIFFICULTY_LEVEL 3 // normal (300ms)
-// #define DIFFICULTY_LEVEL 4 // faster (200ms)
-// #define DIFFICULTY_LEVEL 5 // expert (100ms)
-//
-#if defined(DIFFICULTY_LEVEL) && DIFFICULTY_LEVEL > 0
-#define DIFFICULTY_THRESHOLD ((6-DIFFICULTY_LEVEL)*100)
-#ifndef HOMEY_HOLDING_TIME
-#define HOMEY_HOLDING_TIME DIFFICULTY_THRESHOLD
-#endif
-#ifndef INDEX_HOLDING_TIME
-#define INDEX_HOLDING_TIME DIFFICULTY_THRESHOLD
-#endif
-#endif
-
-    behaviors {
-        //////////////////////////////////////////////////////////////////////////
-        //
-        // Miryoku layers and home row mods (ported from my QMK endgame)
-        // - https://sunaku.github.io/home-row-mods.html#porting-to-zmk
-        // - https://github.com/urob/zmk-config#timeless-homerow-mods
-        //
-        //////////////////////////////////////////////////////////////////////////
-        //
-        // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-        // for the pinky, ring, and middle fingers (which are assigned to Super,
-        // Alt, and Ctrl respectively in the Miryoku system) on home row keys.
-        //
-
-        #ifndef HOMEY_HOLDING_TYPE
-    #define HOMEY_HOLDING_TYPE "tap-preferred"
-    #endif
-
-    //
-    // HOMEY_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // home row mod keys in order to send their modifiers to the computer
-    // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
-    //
-    #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME 270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
-    #endif
-
-    //
-    // HOMEY_STREAK_DECAY defines how long you need to wait (milliseconds)
-    // after typing before you can use home row mods again.  It prevents
-    // unintended activation of home row mods when you're actively typing.
-    //
-    #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 250
-    #endif
-
-    //
-    // HOMEY_REPEAT_DECAY defines how much time you have left (milliseconds)
-    // after tapping a key to hold it again in order to make it auto-repeat.
-    //
-    #ifndef HOMEY_REPEAT_DECAY
-    #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-    #endif
-
-    //
-    // INDEX_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-    // for index fingers (which Miryoku assigns to Shift) on home row keys.
-    //
-    #ifndef INDEX_HOLDING_TYPE
-    #define INDEX_HOLDING_TYPE "tap-preferred"
-    #endif
-
-    //
-    // INDEX_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // index finger keys in order to send their modifiers to the computer
-    // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
-    //
-    #ifndef INDEX_HOLDING_TIME
-    #define INDEX_HOLDING_TIME 170
-    #endif
-
-    //
-    // INDEX_STREAK_DECAY defines how long you need to wait (milliseconds)
-    // after typing before you can use home row mods again.  It prevents
-    // unintended activation of home row mods when you're actively typing.
-    //
-    #ifndef INDEX_STREAK_DECAY
-    #define INDEX_STREAK_DECAY 150
-    #endif
-
-    //
-    // INDEX_REPEAT_DECAY defines how much time you have left (milliseconds)
-    // after tapping a key to hold it again in order to make it auto-repeat.
-    //
-    #ifndef INDEX_REPEAT_DECAY
-    #define INDEX_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-    #endif
 
     //
     // Corne Key Positions
@@ -148,7 +36,7 @@
 
     left_pinky: homey_left_pinky {
         compatible = "zmk,behavior-hold-tap";
-        flavor = LEFT_PINKY_HOLDING_TYPE;
+        flavor = "tap-preferred";
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <HOMEY_HOLDING_TIME>;
@@ -164,7 +52,7 @@
 
     right_pinky: homey_right_pinky {
         compatible = "zmk,behavior-hold-tap";
-        flavor = RIGHT_PINKY_HOLDING_TYPE;
+        flavor = "tap-preferred";
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <HOMEY_HOLDING_TIME>;
@@ -180,8 +68,7 @@
 
         left_ring1: homey_left_ring1 {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            LEFT_RING1_HOLDING_TYPE;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
@@ -191,12 +78,10 @@
             bindings = <&kp>, <&kp>;
         };
 
-     
 
         right_ring1: homey_right_ring1 {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            RIGHT_RING1_HOLDING_TYPE;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
@@ -206,84 +91,40 @@
             bindings = <&kp>, <&kp>;
         };
 
-   
-
-
-
-
-        left_ring2: homey_left_ring2 {
-            compatible = "zmk,behavior-hold-tap";
-            flavor =
-            LEFT_RING2_HOLDING_TYPE;
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <HOMEY_HOLDING_TIME>;
-            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-    
-
-
-
-
-        right_ring2: homey_right_ring2 {
-            compatible = "zmk,behavior-hold-tap";
-            flavor =
-            RIGHT_RING2_HOLDING_TYPE;
-            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <HOMEY_HOLDING_TIME>;
-            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-      
-     
+  
      
         left_middy: homey_left_middy {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            LEFT_MIDDY_HOLDING_TYPE;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
-        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
-
 
 
 
 
         right_middy: homey_right_middy {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            RIGHT_MIDDY_HOLDING_TYPE;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
-        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
 
 
 
-    
-
-
         left_index: homey_left_index {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            LEFT_INDEX_HOLDING_TYPE;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <INDEX_HOLDING_TIME>;
@@ -295,12 +136,9 @@
 
 
 
-
-
         right_index: homey_right_index {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            RIGHT_INDEX_HOLDING_TYPE;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <INDEX_HOLDING_TIME>;

@@ -151,9 +151,9 @@
         flavor = LEFT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
-        tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
-        quick-tap-ms = <LEFT_PINKY_REPEAT_DECAY>;
-        require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
+        tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
@@ -167,9 +167,9 @@
         flavor = RIGHT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
-        tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
-        quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
-        require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
+        tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
@@ -184,9 +184,9 @@
             LEFT_RING1_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
-            quick-tap-ms = <LEFT_RING1_REPEAT_DECAY>;
-            require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
+            tapping-term-ms = <HOMEY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
@@ -199,9 +199,9 @@
             RIGHT_RING1_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
-            quick-tap-ms = <RIGHT_RING1_REPEAT_DECAY>;
-            require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
+            tapping-term-ms = <HOMEY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
@@ -217,9 +217,9 @@
             LEFT_RING2_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
-            quick-tap-ms = <LEFT_RING2_REPEAT_DECAY>;
-            require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
+            tapping-term-ms = <HOMEY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
@@ -235,9 +235,9 @@
             RIGHT_RING2_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
-            quick-tap-ms = <RIGHT_RING2_REPEAT_DECAY>;
-            require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
+            tapping-term-ms = <HOMEY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
@@ -251,9 +251,9 @@
             LEFT_MIDDY_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <LEFT_MIDDY_HOLDING_TIME>;
-            quick-tap-ms = <LEFT_MIDDY_REPEAT_DECAY>;
-            require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
+            tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
@@ -268,9 +268,9 @@
             RIGHT_MIDDY_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
-            quick-tap-ms = <RIGHT_MIDDY_REPEAT_DECAY>;
-            require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
+            tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
@@ -286,9 +286,9 @@
             LEFT_INDEX_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
-            quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
-            require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
+            tapping-term-ms = <INDEX_HOLDING_TIME>;
+            quick-tap-ms = <INDEX_REPEAT_DECAY>;
+            require-prior-idle-ms = <INDEX_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
@@ -303,9 +303,9 @@
             RIGHT_INDEX_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
-            quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
-            require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
+            tapping-term-ms = <INDEX_HOLDING_TIME>;
+            quick-tap-ms = <INDEX_REPEAT_DECAY>;
+            require-prior-idle-ms = <INDEX_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };

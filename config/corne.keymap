@@ -32,7 +32,7 @@
 
     #define THUMB_KEYS   36 37 38   39 40 41
 
-    
+    behaviors {
 
     left_pinky: homey_left_pinky {
         compatible = "zmk,behavior-hold-tap";

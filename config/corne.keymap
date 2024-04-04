@@ -178,6 +178,14 @@
 
             label = "FAT_ARROW_MACRO";
         };
+
+        slim_arrow_macro: slim_arrow_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp MINUS &kp GREATER_THAN>;
+
+            label = "SLIM_ARROW_MACRO";
+        };
     };
 
     combos {
@@ -272,6 +280,11 @@
         combo_fat_arrow {
             bindings = <&fat_arrow_macro>;
             key-positions = <7 8 9>;
+        };
+
+        combo_slim_arrow {
+            bindings = <&slim_arrow_macro>;
+            key-positions = <19 20 21>;
         };
     };
 

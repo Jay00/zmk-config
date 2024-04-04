@@ -289,7 +289,7 @@
 
         combo_gmail_delete {
             bindings = <&kp HASH>;
-            key-positions = <2 3 1>;
+            key-positions = <3 4>;
         };
     };
 

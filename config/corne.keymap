@@ -286,6 +286,11 @@
             bindings = <&slim_arrow_macro>;
             key-positions = <19 20 21>;
         };
+
+        combo_gmail_delete {
+            bindings = <&kp HASH>;
+            key-positions = <2 3 1>;
+        };
     };
 
     keymap {

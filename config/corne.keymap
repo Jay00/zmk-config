@@ -9,8 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-
-
     //
     // Corne Key Positions
     //
@@ -19,7 +17,7 @@
     // | 24 | 25 | 26 | 27 | 28 | 29 |   | 30 | 31 | 32 | 33 | 34 | 35 |
     //                | 36 | 37 | 38 |   | 39 | 40 | 41 |
     //
-    
+
     #define LEFT_HAND_KEYS      \
           0  1  2  3  4  5      \
          12 13 14 15 16 17      \
@@ -59,9 +57,7 @@
     //
     #define INDEX_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
     #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-
     behaviors {
-
         left_pinky: homey_left_pinky {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
@@ -73,7 +69,6 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
-
 
         right_pinky: homey_right_pinky {
             compatible = "zmk,behavior-hold-tap";
@@ -87,7 +82,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-
         left_ring: homey_left_ring {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
@@ -99,7 +93,6 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
-
 
         right_ring: homey_right_ring {
             compatible = "zmk,behavior-hold-tap";
@@ -113,8 +106,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-  
-     
         left_middy: homey_left_middy {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
@@ -126,7 +117,6 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
-
 
         right_middy: homey_right_middy {
             compatible = "zmk,behavior-hold-tap";
@@ -140,7 +130,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-
         left_index: homey_left_index {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
@@ -152,7 +141,6 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
-
 
         right_index: homey_right_index {
             compatible = "zmk,behavior-hold-tap";
@@ -175,12 +163,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 4 &kp LALT>,
+                <&mo 2 &kp LALT>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 4 &kp LALT>;
+                <&mo 2 &kp LALT>;
         };
     };
 
@@ -229,7 +217,7 @@
         };
 
         nav_layer {
-            bindings = <&mo 5>;
+            bindings = <&mo 4>;
             key-positions = <13 38>;
         };
 
@@ -280,61 +268,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E         &kp R                     &kp T        &kp Y      &kp U                  &kp I      &kp O    &kp P     &kp BSPC
-&caps_word      &kp A  &kp S  &kp D         &left_index LEFT_SHIFT F  &kp G        &kp H      &right_index RSHIFT J  &kp K      &kp L    &kp SEMI  &kp SQT
-&sk LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V                     &kp B        &kp N      &kp M                  &kp COMMA  &kp DOT  &kp FSLH  &sk RIGHT_SHIFT
-                              &kp LEFT_GUI  &kp LEFT_CONTROL          &kp SPACE    &kp SPACE  &kp ENTER              &mo 1
-            >;
-        };
-
-        layer_select {
-            bindings = <
-&none  &none  &none  &to 2  &none  &none    &none  &none  &none  &none  &none  &none
-&to 4  &to 5  &none  &to 3  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &none  &none  &none    &none  &none  &none
+&kp TAB         &kp Q                   &kp W                  &kp E                &kp R                     &kp T      &kp Y      &kp U                  &kp I                 &kp O                    &kp P     &kp BSPC
+&caps_word      &left_pinky LEFT_GUI A  &left_ring LEFT_ALT S  &left_middy LCTRL D  &left_index LEFT_SHIFT F  &kp G      &kp H      &right_index RSHIFT J  &right_middy RCTRL K  &right_ring RIGHT_ALT L  &kp SEMI  &kp SQT
+&sk LEFT_SHIFT  &kp Z                   &kp X                  &kp C                &kp V                     &kp B      &kp N      &kp M                  &kp COMMA             &kp DOT                  &kp FSLH  &sk RIGHT_SHIFT
+                                                               &kp LEFT_GUI         &kp LEFT_CONTROL          &kp RET    &kp SPACE  &to 1                  &none
             >;
         };
 
         numbers_top_row {
             bindings = <
-&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp N5    &kp NUMBER_6  &kp N7           &kp N8  &kp N9  &kp N0  &trans
-&trans     &trans        &trans        &trans        &kp LEFT_SHIFT  &trans    &trans        &kp RIGHT_SHIFT  &trans  &trans  &trans  &trans
-&trans     &trans        &trans        &trans        &trans          &trans    &trans        &trans           &trans  &trans  &trans  &trans
-                                       &to 0         &trans          &trans    &trans        &trans           &trans
-            >;
-        };
-
-        numpad {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_EQUAL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_N0     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &trans
-                        &to 0   &trans  &trans    &trans        &trans           &kp KP_NUMBER_0
-            >;
-        };
-
-        bluetooth {
-            bindings = <
-&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                        &to 0         &trans        &trans          &trans  &none   &trans
-            >;
-        };
-
-        nav_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB    &none   &none   &none             &none           &none     &none     &kp HOME  &kp UP    &kp PAGE_UP    &none    &kp BSPC
-&none      &none   &none   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none     &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT      &kp END  &trans
-&kp LSHFT  &trans  &trans  &trans            &trans          &trans    &trans    &kp END   &kp DOWN  &kp PAGE_DOWN  &trans   &trans
-                           &to 0             &trans          &trans    &trans    &trans    &none
+&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp N5    &kp NUMBER_6  &kp N7           &kp N8     &kp N9         &kp N0  &trans
+&trans     &trans        &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &trans    &trans        &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &trans  &trans
+&trans     &trans        &trans        &trans        &trans          &trans    &trans        &trans           &trans     &trans         &trans  &trans
+                                       &to 0         &to 0           &trans    &trans        &to 2            &none
             >;
         };
 
@@ -346,10 +292,43 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
 &none      &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &trans       &to 0      &trans     &to 0
+                             &to 0     &to 1     &trans       &to 0      &trans     &to 0
+            >;
+        };
+
+        numpad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_EQUAL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_N0     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &trans
+                        &to 0   &to 2   &trans    &trans        &trans           &kp KP_NUMBER_0
+            >;
+        };
+
+        nav_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&kp TAB    &none   &none         &none             &none           &none     &none     &kp HOME  &kp UP    &kp PAGE_UP    &none    &kp BSPC
+&none      &none   &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none     &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT      &kp END  &trans
+&kp LSHFT  &trans  &trans        &trans            &trans          &trans    &trans    &kp END   &kp DOWN  &kp PAGE_DOWN  &trans   &trans
+                                 &to 0             &trans          &trans    &trans    &trans    &none
+            >;
+        };
+
+        bluetooth {
+            bindings = <
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                        &to 0         &trans        &trans          &trans  &none   &trans
             >;
         };
     };

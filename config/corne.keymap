@@ -260,7 +260,7 @@
         };
 
         equals {
-            bindings = <&kp KP_EQUAL>;
+            bindings = <&kp EQUAL>;
             key-positions = <7 8>;
         };
 

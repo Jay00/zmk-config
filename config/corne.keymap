@@ -227,6 +227,20 @@
 
             label = "ATLANTIC_REPORTER";
         };
+
+        paragraph_symbol: paragraph_symbol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_NUMBER_1 &kp KP_NUMBER_8 &kp KP_NUMBER_2>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "PARAGRAPH_SYMBOL";
+        };
     };
 
     combos {
@@ -348,6 +362,12 @@
         section_symbol {
             bindings = <&section_symbol>;
             key-positions = <14 21>;
+            timeout-ms = <100>;
+        };
+
+        combo_pilcrow {
+            bindings = <&paragraph_symbol>;
+            key-positions = <14 10>;
             timeout-ms = <100>;
         };
     };

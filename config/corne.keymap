@@ -223,7 +223,7 @@
                 <&macro_tap>,
                 <&kp LS(A) &kp PERIOD &macro_param_1to1>,
                 <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER &kp LS(D)>;
+                <&kp MACRO_PLACEHOLDER &kp D>;
 
             label = "ATLANTIC_REPORTER";
         };
@@ -333,9 +333,22 @@
             key-positions = <3 4>;
         };
 
-        combo_atlantic_2 {
-            bindings = <&atlantic_2nd>;
-            key-positions = <13 2>;
+        atlantic_2nd {
+            bindings = <&atlantic_reporter KP_NUMBER_2>;
+            key-positions = <13 32>;
+            timeout-ms = <100>;
+        };
+
+        atlantic_3rd {
+            bindings = <&atlantic_reporter KP_NUMBER_3>;
+            key-positions = <13 33>;
+            timeout-ms = <100>;
+        };
+
+        section_symbol {
+            bindings = <&section_symbol>;
+            key-positions = <14 21>;
+            timeout-ms = <100>;
         };
     };
 
